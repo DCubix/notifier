@@ -12,7 +12,7 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
-@ServerEndpoint("/ws")
+@ServerEndpoint("/sock")
 public class WebSocketServer {
 	
 	private static final List<Session> clients = new ArrayList<>();
@@ -26,7 +26,7 @@ public class WebSocketServer {
 	public void onClose(Session user) {
 		clients.remove(user);
 	}
-
+	
 	@OnError
 	public void onError(Throwable e){
 		e.printStackTrace();
