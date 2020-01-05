@@ -12,7 +12,7 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
-@ServerEndpoint("/sock")
+@ServerEndpoint("/ws")
 public class WebSocketServer {
 	
 	private static final List<Session> clients = new ArrayList<>();
