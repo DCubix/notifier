@@ -31,7 +31,7 @@ public class WebSocketServer {
 	public void onError(Throwable e){
 		e.printStackTrace();
 	}
-		
+
 	public static void broadcast(String message) {
 		for (Session client : clients) {
 			if (client != null && client.isOpen()) {
